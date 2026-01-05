@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo a mexer com Links</title>
+</head>
+<body>
+    <h1>Aprendendo a Mexer com Links</h1>
+    <p>A tag que da um endereço de um link é a tag a, ela conta com os atributos href(que contém o link), target(que diz como deve abrir esse link, os principais são na própria janela <em>_self</em> e em outra janela <em>_blank</em> ) e hreflang (que diz qual é a língua do site contido no link).</p> Além disso, conta com o atributo rel, que indica qual o tipo de site de destino do link, sendo ele do autor, voltar no mesmo site, proximo documento no mesmo site, externo ou de site pagos.
+    <h2>Link para o próprio site</h2>
+    <p>Usamos um link para o próprio site quando o link que vamos abrir irá manter a pessoa em nosso site, então na tag a usamos o atributo <code>target="_self"</code> que já é o padrão.</p>
+    <blockquote>
+        <a href="same.html" target="_self" hreflang="pt-br" rel="next"> Esse link te mantém em nosso site, na mesma janela.</a>
+    </blockquote>
+    <h2>Link para site externo</h2>
+    <p>Usamos este link para um site externo, assim abrimos ele em outra janela para manter o usuário em nosso site na janela já existente, isso é feito usando o atributo <code>target="_blank"</code>.</p>
+    <blockquote>
+        <a href="https://github.com/Jrmelo317" target="_blank" hreflang="en" rel="external">Isso te levará para o meu github.</a>
+    </blockquote>
+    <h2>Arquivos de Download</h2>
+    <p>Para fazer download de arquivos usamos a mesma tag de link externo a. Mas precisamos usar os atributos download, que indicara o nome com a extensão do que vai ser baixado, e o atributo type, que indica qual o tipo da aplicação que será baixada. Segue o link para a <a href="https://github.com/gustavoguanabara/html-css/blob/master/aulas-pdf/10%20-%20Liga%C3%A7%C3%B5es%20em%20toda%20parte.pdf" target="_blank" hreflang="pt-br" rel="external">Aula 10</a> do github do guanabara, na página 6 contém alguns tipos para se usar no atributo type. <br> Se quiser pode baixar <a href="slides10.pdf" download="slides10.pdf" type="application/pdf">aqui</a> os slides completos da aula 10.</p>
+    <!--href faz referência ao arquivo que deseja baixar, download indica o nome que será baixado no navegador e type indica o tipo do arquivo baixado-->
+</body>
+</html>
