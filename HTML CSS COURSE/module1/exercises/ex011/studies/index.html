@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens Dinâmicas - Aúdio - Vídeo</title>
+</head>
+<body>
+    <h1>Imagens Dinâmicas, Aúdios e Vídeos</h1>
+    <h2>Imagens Flexíveis</h2>
+    <p>O que acontece é que as imagens podem não caber em todos os formatos de tela, porque por exemplo a tela de uma tv é maior que um celular. Assim precisamos redimensionar as imagens de acordo com o tamanho da tela. Para isso usamos as tags <code><dfn title="&lt;picture&gt;">&lt;picture&gt;</dfn></code>, <code><dfn title="&lt;source&gt;">&lt;source&gt;</dfn></code> e <code><dfn title="&lt;img&gt;">&lt;img&gt;</dfn></code>.</p>
+    <p>Para visualizar suas configurações e descrição de utilização, retorne aos <a href="https://github.com/gustavoguanabara/html-css/blob/master/aulas-pdf/11%20-%20Imagens%20din%C3%A2micas%2C%20%C3%A1udios%20e%20v%C3%ADdeos.pdf" target="_blank" rel="external">slides da aula 11.</a></p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="pictures/paisagem300x300.jpg" type="image/jpeg">
+        <source media="(max-width: 1050px)" srcset="pictures/paisagem700x700.jpg" type="image/jpeg">
+        <img src="pictures/paisagem1000x1000.jpg" alt="Paisagem1000x1000px">
+    </picture>
+    <h2>Aúdios</h2>
+    <p>A principal tag utilizada para aúdio é <dnf title="&lt;audio&gt;">audio</dnf>. Os seus principais atributos são: <strong>preload</strong> (que diz como a janela deve pre-carregar o som), <strong>controls</strong> (que diz se o controlador do aúdio será aparente ao usuário), <strong>autoplay</strong> (que se inserido iniciará a produção do aúdio assim que for carregado) e <strong>loop</strong> (que faz com que o aúdio repita eternamente).</p>
+    <audio preload="metadata" controls>
+        <source src="sounds/splash.mp3" type="audio/mpeg">
+        <source src="sounds/splash.ogg" type="audio/ogg">
+        <source src="sounds/splash.wav" type="audio/wav">
+        <p>Seu navegador não suporta aúdio, baixe <a href="sounds/splash.mp3" download="splash.mp3" type="audio/mpeg">aplash.mp3</a></p>
+    </audio>
+    <h2>Vídeos</h2>
+    <p>A principal tag utilizada para vídeos no HTML5 é <dnf title="&lt;dnf&gt;">video</dnf>. Os seus principais atributos são: <strong>width</strong> (indica a largura que o vídeo deve ter na tela), <strong>poster</strong> (configura a imagem que vai aparecer como capa enquanto o usuário não clicar no play), <strong>controls</strong> (configura se os controles aparecerão para o usuário) e <strong>autoplay</strong> (configura se o vídeo começará automaticamente).</p>
+    <video width="300" poster="pictures/poster.jpg" controls>
+        <source src="videos/videosinuca.webm" type="video/webm">
+        <source src="videos/videosinuca.mp4" type="video/mp4">
+        <p>Infelizmente seu navegador não conseguiu carregar o <a href="videos/videosinuca.mp4" download="sinuca.mp4" type="video/mp4">vídeo</a>.</p>
+    </video>
+    <h3>Vídeos hospedados pelo Youtube</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/VKmPGmFY7H4?si=nHN5hckspQtOKT5t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</body>
+</html>
